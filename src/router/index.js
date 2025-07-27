@@ -5,16 +5,51 @@
  */
 
 // Composables
-import { createRouter, createWebHistory } from 'vue-router/auto'
-import { setupLayouts } from 'virtual:generated-layouts'
-import { routes } from 'vue-router/auto-routes'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Login from '@/pages/login.vue'
+import RegistryUser from '@/pages/registryUser.vue'
+import Principal from '@/pages/principal.vue'
+import Tickets from '@/pages/tickets.vue'
+import CrearTicket from '@/pages/crearTicket.vue'
+
+
+const routes = []
+
+const loginRoute = {
+  path: '/',
+  component: Login,
+}
+
+const registerRoute = {
+  path: '/registro',
+  name: 'registro',
+  component: RegistryUser,
+}
+
+const principalRoute = {
+  path: '/principal',
+  name: 'principal',
+  component: Principal,
+}
+
+const ticketRoute = {
+  path: '/tickets',
+  name: 'tickets',
+  component: Tickets,
+}
+const crearTicketRoute = {
+  path: '/tickets/crear-ticket',
+  name: 'crearTicket',
+  component: CrearTicket,
+}
+routes.push(loginRoute, registerRoute, principalRoute, ticketRoute, crearTicketRoute)
+
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: setupLayouts(routes),
+  history: createWebHashHistory(),
+  routes,
 })
 
-// Workaround for https://github.com/vitejs/vite/issues/11804
 router.onError((err, to) => {
   if (err?.message?.includes?.('Failed to fetch dynamically imported module')) {
     if (!localStorage.getItem('vuetify:dynamic-reload')) {
