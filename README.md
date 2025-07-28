@@ -1,79 +1,157 @@
-# Vuetify (Default)
+# Sistema Helpdesk - ITOps
 
-This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
+![Vue.js](https://img.shields.io/badge/Vue.js-3-4FC08D?style=for-the-badge&logo=vue.js)
+![Vuetify](https://img.shields.io/badge/Vuetify-3-1867C0?style=for-the-badge&logo=vuetify)
 
-## ❗️ Important Links
+## 📋 Índice
 
-- 📄 [Docs](https://vuetifyjs.com/)
-- 🚨 [Issues](https://issues.vuetifyjs.com/)
-- 🏬 [Store](https://store.vuetifyjs.com/)
-- 🎮 [Playground](https://play.vuetifyjs.com/)
-- 💬 [Discord](https://community.vuetifyjs.com)
+1.  [Descripción del Proyecto](#descripcion-del-proyecto)
+2.  [Características Implementadas](#caracteristicas-implementadas)
+3.  [Tecnologías Utilizadas](#tecnologias-utilizadas)
+4.  [Puesta en Marcha](#puesta-en-marcha)
+5.  [Guía de Uso y Pruebas](#guia-de-uso-y-pruebas)
+6.  [Estructura del Proyecto](#estructura-del-proyecto)
+7.  [Licencia](#licencia)
+8.  [Autor](#autor)
 
-## 💿 Install
+---
 
-Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
+## 📝 Descripción del Proyecto
 
-| Package Manager                                                | Command        |
-|---------------------------------------------------------------|----------------|
-| [yarn](https://yarnpkg.com/getting-started)                   | `yarn install` |
-| [npm](https://docs.npmjs.com/cli/v7/commands/npm-install)     | `npm install`  |
-| [pnpm](https://pnpm.io/installation)                          | `pnpm install` |
-| [bun](https://bun.sh/#getting-started)                        | `bun install`  |
+Proyecto que consiste en el desarrollo de la interfaz de usuario para un sistema de mesa de ayuda (Helpdesk) para la empresa "ITOps - Operaciones IT".
 
-After completing the installation, your environment is ready for Vuetify development.
+El objetivo es crear una aplicación web funcional, intuitiva y moderna, aplicando conceptos de usabilidad y utilizando tecnologías actuales.
 
-## ✨ Features
+## ✨ Características Implementadas
 
-- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
-- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/), the intuitive, modular state management solution for Vue.
-- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and vite-plugin-vue-layouts for organizing Vue file layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
-- 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
+-   [x] **Autenticación de Usuario (UI):** Formularios de Inicio de Sesión y Registro.
+-   [x] **Validación de Formularios:** Reglas para campos requeridos, formato de email, solo números, etc.
+-   [x] **Dashboard Principal:** Layout de aplicación con barra superior y menú de navegación lateral.
+-   [x] **Navegación por Tarjetas:** Menú visual para acceder a los módulos principales.
+-   [x] **Módulo de Tickets:**
+    -   Tabla de datos interactiva.
+    -   Búsqueda en tiempo real.
+    -   Paginación y selección de ítems por página.
+-   [x] **Creación de Tickets:** Formulario completo para registrar un nuevo ticket.
 
-These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
+## 🛠️ Tecnologias Utilizadas
 
-## 💡 Usage
+-   **Vue.js 3:** Framework principal para la construcción de la interfaz.
+-   **Vuetify 3:** Biblioteca de componentes Material Design para un diseño consistente y responsivo.
+-   **Vue Router:** Para la gestión de rutas y navegación entre páginas.
+-   **HTML5 / CSS3 / JavaScript (ES6+)**
 
-This section covers how to start the development server and build your project for production.
+## 🚀 Puesta en Marcha
 
-### Starting the Development Server
+Sigue estos pasos para ejecutar el proyecto en tu máquina local.
 
-To start the development server with hot-reload, run the following command. The server will be accessible at [http://localhost:3000](http://localhost:3000):
+### Prerrequisitos
 
-```bash
-yarn dev
-```
+Asegúrate de tener instalado **Node.js** (versión 18 o superior) y **npm**.
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+### Instalación
 
-> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that happen as part of the Vuetify import mapping. If you are on Node [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the warning, you can remove this from your package.json dev script.
+1.  **Clona el repositorio** (o descomprime el archivo ZIP):
+    ```sh
+    git clone [Pega aquí el enlace a tu repositorio de GitHub]
+    ```
 
-### Building for Production
+2.  **Navega a la carpeta** del proyecto:
+    ```sh
+    cd [nombre-de-la-carpeta]
+    ```
 
-To build your project for production, use:
+3.  **Instala las dependencias** del proyecto:
+    ```sh
+    npm install
+    ```
 
-```bash
-yarn build
-```
+4.  **Inicia el servidor de desarrollo**:
+    ```sh
+    npm run dev
+    ```
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+5.  Abre tu navegador y ve a `http://localhost:3000` (o la URL que indique la consola).
 
-Once the build process is completed, your application will be ready for deployment in a production environment.
+## 💻 Guía de Uso y Pruebas
 
-## 💪 Support Vuetify Development
+### Credenciales de Acceso
 
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
+Para probar el flujo de inicio de sesión, utiliza el siguiente usuario ficticio:
 
-- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
-- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
-- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
-- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
-- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
-- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
-- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
+-   **Usuario:** `test@itops.com`
+-   **Contraseña:** `password123`
 
-## 📑 License
-[MIT](http://opensource.org/licenses/MIT)
+### Flujo de Pruebas Recomendado
 
-Copyright (c) 2016-present Vuetify, LLC
+1.  **Desde la página de Login:**
+    -   Intenta iniciar sesión con los campos vacíos para ver las validaciones.
+    -   Usa credenciales incorrectas para ver la alerta de error.
+    -   Ingresa con las credenciales correctas para acceder al dashboard.
+
+2.  **Desde la Página Principal:**
+    -   Interactúa con el menú lateral (hover para expandir, clic en el ícono para fijar).
+    -   Haz clic en la tarjeta **"TICKETS"** para navegar a la lista de tickets.
+
+3.  **Desde la Página de Tickets:**
+    -   Usa la barra de búsqueda para filtrar la tabla.
+    -   Prueba la paginación en la parte inferior de la tabla.
+    -   Haz clic en el botón **"Nuevo Ticket"** para ir al formulario de creación.
+
+4.  **Desde la Página de Creación de Ticket:**
+    -   Intenta crear un ticket con campos vacíos.
+    -   Usa el botón **"Cancelar"** para volver atrás.
+    -   Llena el formulario correctamente y presiona **"Crear"**. Deberías ver una alerta de éxito y ser redirigido.
+
+## 📂 Estructura del Proyecto
+
+A continuación, se detalla la función de los directorios y archivos clave del proyecto para facilitar su comprensión y mantenimiento.
+
+-   `package.json`: Define los scripts de ejecución (`npm run dev`) y lista todas las dependencias del proyecto (Vue, Vuetify, etc.).
+
+-   **/src**: Directorio principal que contiene todo el código fuente de la aplicación.
+
+    -   **/assets**: Almacena los activos que son procesados por el sistema de compilación, como hojas de estilo CSS globales, imágenes y fuentes.
+
+    -   **/components**: Contiene los componentes de Vue reutilizables en varias partes de la aplicación.
+        -   `AppFooter.vue`: Renderiza el pie de página global.
+        -   `AppHeader.vue`: Renderiza el header de página global.
+        -   `ImagenInicial.vue`: Muestra el banner institucional utilizado en las vistas de Login y Registro.
+
+    -   **/layouts**: Plantillas base para las páginas principales.
+        -   `default.vue`: Layout principal de la app (estructura general, slots, etc.).
+
+    -   **/pages**: Contiene los componentes que representan una página completa. Cada archivo en esta carpeta suele estar asociado a una ruta específica.
+        -   `login.vue`: Formulario y lógica para el inicio de sesión de los usuarios.
+        -   `registryUser.vue`: Formulario y lógica para el registro de nuevos usuarios.
+        -   `principal.vue`: Layout principal de la aplicación una vez autenticado.
+        -   `tickets.vue`: Tabla de datos interactiva con la lista de tickets, búsqueda y paginación.
+        -   `crearTicket.vue`: Formulario completo para la creación de un nuevo ticket, con sus respectivas validaciones.
+
+    -   **/plugins**: Configuración e inicialización de plugins externos.
+        -   `index.js`: Inicialización de plugins generales.
+        -   `vuetify.js`: Configuración de Vuetify.
+
+    -   **/router**:
+        -   `index.js`: Configura Vue Router. Aquí se definen todas las rutas de la aplicación y a qué componente de vista apuntan.
+
+    -   **/stores**: Almacena la lógica de estado global de la aplicación (Pinia, Vuex, etc.).
+        -   `index.js`: Inicialización de los stores.
+        -   `app.js`: Store principal de la app.
+
+    -   **/styles**: Hojas de estilo globales y variables de diseño.
+        -   `settings.scss`: Variables y configuraciones de estilos globales.
+        -   `styles.css`: Estilos globales de la aplicación.
+
+    -   `App.vue`: Es el componente raíz de la aplicación. Su función principal es renderizar el componente de la ruta activa a través de la etiqueta `<router-view>`.
+
+    -   `main.js`: Es el punto de entrada de la aplicación. Aquí se inicializa la instancia de Vue y se conectan los plugins como Vuetify y Vue Router.
+
+## 📄 Licencia
+
+Este proyecto se distribuye bajo la Licencia MIT.
+
+## 👨‍💻 Autor
+
+-   **YESSICA MENDOZA HERRERA**
+-   `ymendozah@gmail.com`
