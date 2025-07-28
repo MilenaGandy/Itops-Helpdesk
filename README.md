@@ -53,10 +53,10 @@ Asegúrate de tener instalado **Node.js** (versión 18 o superior) y **npm**.
 
 1.  **Clona el repositorio** (o descomprime el archivo ZIP):
     ```sh
-    git clone [Pega aquí el enlace a tu repositorio de GitHub]
+    git clone https://github.com/MilenaGandy/Itops-Helpdesk.git
     ```
 
-2.  **Navega a la carpeta** del proyecto:
+2.  **Navega a la carpeta recien creada** del proyecto:
     ```sh
     cd [nombre-de-la-carpeta]
     ```
