@@ -87,4 +87,5 @@ export default defineConfig({
       },
     },
   },
+  base: '/Itops-Helpdesk/',
 })
