@@ -2,7 +2,7 @@
   <AppHeader />
   <v-main>
     <v-container fluid>
-      <p class="text-h5 font-weight-bold">Tickets</p>
+      <p class="text-h5 font-weight-bold">Mis Tickets</p>
       <v-card class="pt-5 px-4 pb-0 mb-4" rounded="lg">
         <v-row align="center" class="mb-4">
           <v-col cols="12" md="8">
@@ -76,37 +76,38 @@
     { title: 'Estado', key: 'status', align: 'center' },
     { title: 'Prioridad', key: 'priority', align: 'center' },
     { title: 'Fecha de Creación', key: 'createdDate', align: 'start' },
+    { title: 'Agente', key: 'agent', align: 'start' },
     { title: 'Acciones', key: 'actions', sortable: false, align: 'center' },
   ]);
 
   // Datos de ejemplo para la tabla
   const tickets = ref([
-    { id: 'TK-00001', subject: 'Falla de conexión a la red interna', status: 'Abierto', priority: 'Alta', createdDate: '2025-07-26' },
-    { id: 'TK-00002', subject: 'Error 503 en el servidor de producción', status: 'En Progreso', priority: 'Urgente', createdDate: '2025-07-26' },
-    { id: 'TK-00003', subject: 'Solicitud de acceso a carpeta compartida', status: 'Cerrado', priority: 'Baja', createdDate: '2025-07-25' },
-    { id: 'TK-00004', subject: 'Correo electrónico bloqueado por spam', status: 'Abierto', priority: 'Media', createdDate: '2025-07-25' },
-    { id: 'TK-00005', subject: 'La impresora no responde', status: 'En Progreso', priority: 'Media', createdDate: '2025-07-24' },
-    { id: 'TK-00006', subject: 'Instalación de software de diseño', status: 'Cerrado', priority: 'Baja', createdDate: '2025-07-23' },
-    { id: 'TK-00007', subject: 'Actualización de antivirus requerida', status: 'Abierto', priority: 'Alta', createdDate: '2025-07-22' },
-    { id: 'TK-00008', subject: 'Problema con la VPN', status: 'En Progreso', priority: 'Urgente', createdDate: '2025-07-21' },
-    { id: 'TK-00009', subject: 'Solicitud de nuevo equipo de cómputo', status: 'Cerrado', priority: 'Media', createdDate: '2025-07-20' },
-    { id: 'TK-00010', subject: 'Fallo en la sincronización de archivos en la nube', status: 'Abierto', priority: 'Baja', createdDate: '2025-07-19' },
-    { id: 'TK-00011', subject: 'Problema con la cámara web', status: 'En Progreso', priority: 'Media', createdDate: '2025-07-18' },
-    { id: 'TK-00012', subject: 'Solicitud de capacitación en software nuevo', status: 'Cerrado', priority: 'Alta', createdDate: '2025-07-17' },
-    { id: 'TK-00013', subject: 'Error de impresión en la impresora de red', status: 'Abierto', priority: 'Urgente', createdDate: '2025-07-16' },
-    { id: 'TK-00014', subject: 'Problema con la conexión a la base de datos', status: 'En Progreso', priority: 'Alta', createdDate: '2025-07-15' },
-    { id: 'TK-00015', subject: 'Solicitud de cambio de contraseña', status: 'Cerrado', priority: 'Baja', createdDate: '2025-07-14' },
-    { id: 'TK-00016', subject: 'Fallo en la actualización del sistema operativo', status: 'Abierto', priority: 'Media', createdDate: '2025-07-13' },
-    { id: 'TK-00017', subject: 'Problema con el software de gestión de proyectos', status: 'En Progreso', priority: 'Alta', createdDate: '2025-07-12' },
-    { id: 'TK-00018', subject: 'Solicitud de acceso a la red Wi-Fi', status: 'Cerrado', priority: 'Baja', createdDate: '2025-07-11' },
-    { id: 'TK-00019', subject: 'Error en la configuración del correo electrónico', status: 'Abierto', priority: 'Media', createdDate: '2025-07-10' },
-    { id: 'TK-00020', subject: 'Problema con el escáner de documentos', status: 'En Progreso', priority: 'Urgente', createdDate: '2025-07-09' },
-    { id: 'TK-00021', subject: 'Solicitud de instalación de software de seguridad', status: 'Cerrado', priority: 'Alta', createdDate: '2025-07-08' },
-    { id: 'TK-00022', subject: 'Fallo en la conexión a la impresora de red', status: 'Abierto', priority: 'Media', createdDate: '2025-07-07' },
-    { id: 'TK-00023', subject: 'Problema con el acceso a la intranet', status: 'En Progreso', priority: 'Baja', createdDate: '2025-07-06' },
-    { id: 'TK-00024', subject: 'Solicitud de actualización de hardware', status: 'Cerrado', priority: 'Alta', createdDate: '2025-07-05' },
-    { id: 'TK-00025', subject: 'Error en la sincronización de archivos compartidos', status: 'Abierto', priority: 'Urgente', createdDate: '2025-07-04' },
-    { id: 'TK-00026', subject: 'Problema con la conexión a la red local', status: 'En Progreso', priority: 'Media', createdDate: '2025-07-03' },
+    { id: 'TK-00001', subject: 'Falla de conexión a la red interna', status: 'Abierto', priority: 'Alta', createdDate: '2025-07-26', agent: 'Yessica Mendoza' },
+    { id: 'TK-00002', subject: 'Error 503 en el servidor de producción', status: 'En Progreso', priority: 'Urgente', createdDate: '2025-07-26', agent: 'Yessica Mendoza' },
+    { id: 'TK-00003', subject: 'Solicitud de acceso a carpeta compartida', status: 'Cerrado', priority: 'Baja', createdDate: '2025-07-25', agent: 'Andres Medina' },
+    { id: 'TK-00004', subject: 'Correo electrónico bloqueado por spam', status: 'Abierto', priority: 'Media', createdDate: '2025-07-25', agent: 'Yessica Mendoza' },
+    { id: 'TK-00005', subject: 'La impresora no responde', status: 'En Progreso', priority: 'Media', createdDate: '2025-07-24', agent: 'Yessica Mendoza' },
+    { id: 'TK-00006', subject: 'Instalación de software de diseño', status: 'Cerrado', priority: 'Baja', createdDate: '2025-07-23', agent: 'Yessica Mendoza' },
+    { id: 'TK-00007', subject: 'Actualización de antivirus requerida', status: 'Abierto', priority: 'Alta', createdDate: '2025-07-22', agent: 'Yessica Mendoza' },
+    { id: 'TK-00008', subject: 'Problema con la VPN', status: 'En Progreso', priority: 'Urgente', createdDate: '2025-07-21', agent: 'Andres Medina' },
+    { id: 'TK-00009', subject: 'Solicitud de nuevo equipo de cómputo', status: 'Cerrado', priority: 'Media', createdDate: '2025-07-20', agent: 'Yessica Mendoza' },
+    { id: 'TK-00010', subject: 'Fallo en la sincronización de archivos en la nube', status: 'Abierto', priority: 'Baja', createdDate: '2025-07-19', agent: 'Yessica Mendoza' },
+    { id: 'TK-00011', subject: 'Problema con la cámara web', status: 'En Progreso', priority: 'Media', createdDate: '2025-07-18', agent: 'Yessica Mendoza' },
+    { id: 'TK-00012', subject: 'Solicitud de capacitación en software nuevo', status: 'Cerrado', priority: 'Alta', createdDate: '2025-07-17', agent: 'Andres Medina' },
+    { id: 'TK-00013', subject: 'Error de impresión en la impresora de red', status: 'Abierto', priority: 'Urgente', createdDate: '2025-07-16', agent: 'Yessica Mendoza' },
+    { id: 'TK-00014', subject: 'Problema con la conexión a la base de datos', status: 'En Progreso', priority: 'Alta', createdDate: '2025-07-15', agent: 'Yessica Mendoza' },
+    { id: 'TK-00015', subject: 'Solicitud de cambio de contraseña', status: 'Cerrado', priority: 'Baja', createdDate: '2025-07-14', agent: 'Yessica Mendoza' },
+    { id: 'TK-00016', subject: 'Fallo en la actualización del sistema operativo', status: 'Abierto', priority: 'Media', createdDate: '2025-07-13', agent: 'Yessica Mendoza' },
+    { id: 'TK-00017', subject: 'Problema con el software de gestión de proyectos', status: 'En Progreso', priority: 'Alta', createdDate: '2025-07-12', agent: 'Yessica Mendoza' },
+    { id: 'TK-00018', subject: 'Solicitud de acceso a la red Wi-Fi', status: 'Cerrado', priority: 'Baja', createdDate: '2025-07-11', agent: 'Yessica Mendoza' },
+    { id: 'TK-00019', subject: 'Error en la configuración del correo electrónico', status: 'Abierto', priority: 'Media', createdDate: '2025-07-10', agent: 'Yessica Mendoza' },
+    { id: 'TK-00020', subject: 'Problema con el escáner de documentos', status: 'En Progreso', priority: 'Urgente', createdDate: '2025-07-09', agent: 'Yessica Mendoza' },
+    { id: 'TK-00021', subject: 'Solicitud de instalación de software de seguridad', status: 'Cerrado', priority: 'Alta', createdDate: '2025-07-08', agent: 'Andres Medina' },
+    { id: 'TK-00022', subject: 'Fallo en la conexión a la impresora de red', status: 'Abierto', priority: 'Media', createdDate: '2025-07-07', agent: 'Yessica Mendoza' },
+    { id: 'TK-00023', subject: 'Problema con el acceso a la intranet', status: 'En Progreso', priority: 'Baja', createdDate: '2025-07-06', agent: 'Yessica Mendoza' },
+    { id: 'TK-00024', subject: 'Solicitud de actualización de hardware', status: 'Cerrado', priority: 'Alta', createdDate: '2025-07-05', agent: 'Yessica Mendoza' },
+    { id: 'TK-00025', subject: 'Error en la sincronización de archivos compartidos', status: 'Abierto', priority: 'Urgente', createdDate: '2025-07-04', agent: 'Yessica Mendoza' },
+    { id: 'TK-00026', subject: 'Problema con la conexión a la red local', status: 'En Progreso', priority: 'Media', createdDate: '2025-07-03', agent: 'Andres Medina' },
   ]);
 
   // Funciones para asignar colores a los chips de estado y prioridad

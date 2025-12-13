@@ -7,6 +7,7 @@
     <v-app-bar-title class="font-weight-bold">HELPDESK</v-app-bar-title>
 
     <template #append>
+      Yessica Mendoza
       <v-btn icon="mdi-account-circle" />
     </template>
   </v-app-bar>

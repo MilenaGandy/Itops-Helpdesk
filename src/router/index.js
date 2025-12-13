@@ -11,6 +11,7 @@ import RegistryUser from '@/pages/registryUser.vue'
 import Principal from '@/pages/principal.vue'
 import Tickets from '@/pages/tickets.vue'
 import CrearTicket from '@/pages/crearTicket.vue'
+import verTicket from '@/pages/verTicket.vue'
 
 
 const routes = []
@@ -42,7 +43,12 @@ const crearTicketRoute = {
   name: 'crearTicket',
   component: CrearTicket,
 }
-routes.push(loginRoute, registerRoute, principalRoute, ticketRoute, crearTicketRoute)
+const verTicketRoute = {
+  path: '/tickets/ver-ticket',
+  name: 'verTicket',
+  component: verTicket,
+}
+routes.push(loginRoute, registerRoute, principalRoute, ticketRoute, crearTicketRoute, verTicketRoute)
 
 
 const router = createRouter({
