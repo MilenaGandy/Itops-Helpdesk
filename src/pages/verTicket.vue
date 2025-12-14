@@ -1,7 +1,7 @@
 <template>
     <AppHeader />
     <v-main>
-        <v-container class="fill-height">
+        <v-container>
             <v-row class="mt-0">
                 <v-col cols="12" md="8">
                     <div class="d-flex align-center">

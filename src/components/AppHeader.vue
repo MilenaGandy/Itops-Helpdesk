@@ -16,9 +16,9 @@
     <v-list nav>
       <v-list-item href="#/principal" prepend-icon="mdi-home" title="Inicio" />
       <v-list-item href="#/tickets" prepend-icon="mdi-ticket-confirmation-outline" title="Tickets" />
-      <v-list-item prepend-icon="mdi-account-group-outline" title="Clientes" />
-      <v-list-item prepend-icon="mdi-check-decagram-outline" title="Mi Gestión" />
-      <v-list-item prepend-icon="mdi-chart-bar" title="Dashboard" />
+      <v-list-item href="#/clientes" prepend-icon="mdi-account-group-outline" title="Clientes" />
+      <v-list-item href="#/mi-gestion" prepend-icon="mdi-check-decagram-outline" title="Mi Gestión" />
+      <v-list-item href="#/dashboard" prepend-icon="mdi-chart-bar" title="Dashboard" />
       <v-list-group value="OpcionesAnidadas">
         <template #activator="{ props }">
           <v-list-item v-bind="props" prepend-icon="mdi-cog-outline" title="Configuración" />

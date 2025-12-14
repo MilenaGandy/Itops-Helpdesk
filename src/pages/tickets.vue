@@ -1,8 +1,8 @@
 <template>
   <AppHeader />
   <v-main>
-    <v-container fluid>
-      <p class="text-h5 font-weight-bold">Mis Tickets</p>
+    <v-container>
+      <h1 class="card-title">Mis Tickets</h1>
       <v-card class="pt-5 px-4 pb-0 mb-4" rounded="lg">
         <v-row align="center" class="mb-4">
           <v-col cols="12" md="8">

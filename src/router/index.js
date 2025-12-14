@@ -12,6 +12,9 @@ import Principal from '@/pages/principal.vue'
 import Tickets from '@/pages/tickets.vue'
 import CrearTicket from '@/pages/crearTicket.vue'
 import verTicket from '@/pages/verTicket.vue'
+import dashboard from '@/pages/dashboard.vue'
+import ticketList from '@/pages/ticketList.vue'
+import configuracion from '@/pages/configuracion.vue'
 
 
 const routes = []
@@ -48,7 +51,32 @@ const verTicketRoute = {
   name: 'verTicket',
   component: verTicket,
 }
-routes.push(loginRoute, registerRoute, principalRoute, ticketRoute, crearTicketRoute, verTicketRoute)
+const dashboardRoute = {
+  path: '/dashboard',
+  name: 'dashboard',
+  component: dashboard,
+}
+const ticketListRoute = {
+  path: '/tickets/lista',
+  name: 'ticketList',
+  component: ticketList,
+}
+const configuracionRoute = {
+  path: '/configuracion',
+  name: 'configuracion',
+  component: configuracion,
+}
+
+routes.push(
+  loginRoute,
+  registerRoute,
+  principalRoute,
+  ticketRoute,
+  crearTicketRoute,
+  verTicketRoute,
+  dashboardRoute,
+  ticketListRoute,
+  configuracionRoute)
 
 
 const router = createRouter({

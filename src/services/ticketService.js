@@ -56,3 +56,24 @@ export const createTicketService = async (ticketData) => {
     throw error; // Re-lanzar para manejarlo en el componente
   }
 };
+
+export const getTicketsService = async () => {
+  try {
+    const response = await fetch(API_URL, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token') || ''}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: No se pudieron cargar los tickets`);
+    }
+
+    return await response.json(); 
+  } catch (error) {
+    console.error('Error en getTicketsService:', error);
+    throw error;
+  }
+};
